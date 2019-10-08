@@ -1,4 +1,42 @@
-# Salesforce App
+# Mirroring App
+
+This tool can be used to "Mirror" a given salesforce Object.
+If we create a record of type X then a clone of this record is also created with type X_Mirror.
+If we update a record of type X then the existing clone of this record is also updated.
+
+# Mirroring App Configuration
+
+This repository contains an example of mirroring of the Account object.
+To do that, two entries in the custom metadata "CloneSetting__mdt" are created:
+1 - Account ==> AccountMirror__c
+2 - AccountMirror__c ==> Account
+
+You can add other SObjects if you wish to mirror them.
+
+After configuring the custom metadata, you should create the triggers for your object to handle insert/delete/update actions.
+
+For our example, two triggers were created:
+1 - AccountTrigger
+2 - AccountMirrorTrigger
+
+The update and insert actions were managed and implemented.
+
+# Mirroring App Attention point.
+
+For every Pair, one SObject should be the Master. In our example, the Account is the Master SObject and AccountMirror__c is the secondary SObject.
+
+For the secondary SObject a mandatory field called MirrorId__c should be created. Field type is text, declared as an externalId and unique.
+
+You can specify an subset of record to clone (mirror). To do that you can create a FieldSet on the Master or secondary SObject and set this field set in the configuration (CloneSetting__mdt.RestrictedField)
+
+You can delete the AccountMirror__c Object and custom metadata entries/Class/Triggers after deploying. Those were given for as an example.
+
+
+# Mirroring App TODO.
+- Test class: No test class were given. test class should be done to test your trigger logic on your own objects.
+- Decoupling the Master and secondary SObject. both SObjects became Master records
+
+# Help with Visual code extension
 
 This guide helps Salesforce developers who are new to Visual Studio Code go from zero to a deployed app using Salesforce Extensions for VS Code and Salesforce CLI.
 
