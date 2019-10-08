@@ -28,13 +28,15 @@ The update and insert actions were managed and implemented.
 
 # Mirroring App Attention point.
 
-For every Pair, one SObject should be the Master. In our example, the Account is the Master SObject and AccountMirror__c is the secondary SObject.
+- For every Pair, one SObject should be the Master. In our example, the Account is the Master SObject and AccountMirror__c is the secondary SObject.
 
-For the secondary SObject a mandatory field called MirrorId__c should be created. Field type is text, declared as an externalId and unique.
+- For the secondary SObject a mandatory field called MirrorId__c should be created. Field type is text, declared as an externalId and unique.
 
-You can specify an subset of record to clone (mirror). To do that you can create a FieldSet on the Master or secondary SObject and set this field set in the configuration (CloneSetting__mdt.RestrictedField)
+- Be careful for Record Type Ids or lookup fields. Record Type are not managed in this version of the application. The secondaty Object should not have record types.
 
-You can delete the AccountMirror__c Object and custom metadata entries/Class/Triggers after deploying. Those were given for as an example.
+- You can specify an subset of record to clone (mirror). To do that you can create a FieldSet on the Master or secondary SObject and set this field set in the configuration (CloneSetting__mdt.RestrictedField)
+
+- You can delete the AccountMirror__c Object and custom metadata entries/Class/Triggers after deploying. Those were given for as an example.
 
 
 # Mirroring App TODO.
