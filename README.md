@@ -4,6 +4,11 @@ This tool can be used to "Mirror" a given salesforce Object.
 If we create a record of type X then a clone of this record is also created with type X_Mirror.
 If we update a record of type X then the existing clone of this record is also updated.
 
+Useful Use case:
+Some Application can use custom Objects instead of Standard Objects to perform some logic, because they were built to support user with Force.com licences (dont have access to some standard objects).
+
+To give users who have access to the another Salesforce Licence, and wish to use the Application and the Standard objects, the possibility to mirror the custom objects present in the Application into Salesforce Standard SObject.
+
 # Mirroring App Configuration
 
 This repository contains an example of mirroring of the Account object.
