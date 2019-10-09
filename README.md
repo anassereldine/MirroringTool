@@ -38,6 +38,8 @@ The update and insert actions were managed and implemented.
 
 - You can delete the AccountMirror__c Object and custom metadata entries/Class/Triggers after deploying. Those were given for as an example.
 
+- For the moment, the main function U001_SObjectUtils.getMirroredSObject, can take one SObject. All fields to mirror should be included in this parameter. If the context call for this method is a trigger, by default, fields are populated in the Trigger.new.
+
 
 # Mirroring App TODO.
 - Test class: No test class were given. test class should be done to test your trigger logic on your own objects.
