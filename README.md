@@ -28,7 +28,7 @@ The update and insert actions were managed and implemented.
 
 # Mirroring App Attention point.
 
-- For every Pair, one SObject should be the Master. In our example, the Account is the Master SObject and AccountMirror__c is the secondary SObject.
+- For every Pair, one SObject should be the Master. In our example, the Account is the Master SObject and AccountMirror__c is the secondary sObject.
 
 - For the secondary SObject a mandatory field called MirrorId__c should be created. Field type is text, declared as an externalId and unique.
 
