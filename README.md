@@ -32,7 +32,7 @@ The update and insert actions were managed and implemented.
 
 - For the secondary SObject a mandatory field called MirrorId__c should be created. Field type is text, declared as an externalId and unique.
 
-- Be careful for Record Type Ids or lookup fields. Record Type are not managed in this version of the application. The secondaty Object should not have record types.
+- Be careful for Record Type Ids or lookup fields. Record Type are not managed in this version of the application. The secondary Object should not have record types.
 
 - You can specify an subset of record to clone (mirror). To do that you can create a FieldSet on the Master or secondary SObject and set this field set in the configuration (CloneSetting__mdt.RestrictedField)
 
